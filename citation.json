@@ -1,0 +1,86 @@
+```json 
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Wikipedia Entity Schema (v0.0.1)",
+  "type": "object",
+  "properties": {
+    "text": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "revision_id": {
+      "type": "integer"
+    },
+    "revision_comment": {
+      "type": "string"
+    },
+    "user_id": {
+      "type": "string"
+    },
+    "timestamp": {
+      "type": "string"
+    },
+    "sections": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "section": {
+            "type": "object",
+            "properties": {
+              "section_label": {
+                "type": "string"
+              },
+              "text": {
+                "type": "string"
+              },
+              "level": {
+                "type": "integer"
+              },
+              "citations": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "cite_id": {
+                      "type": "integer"
+                    },
+                    "type": {
+                      "type": "string"
+                    },
+                    "url": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "statements": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "statement": {
+                      "type": "string"
+                    },
+                    "statement_id": {
+                      "type": "integer"
+                    },
+                    "citations": {
+                      "type": "array",
+                      "items": {
+                        "type": "integer"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+```

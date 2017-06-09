@@ -1,4 +1,3 @@
-```json 
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "Wikipedia Entity Schema (v0.0.1)",
@@ -83,4 +82,3 @@
     }
   }
 }
-```

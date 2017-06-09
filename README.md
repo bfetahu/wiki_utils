@@ -28,9 +28,46 @@ Here we extract the citations from the Wikipedia articles. We keep only the URL 
 
 We additionally extract the statements citing such references. Here we rely on a heuristic which we defined in the paper below, and is called the inter-citation text. However, the code can be easily modified to allow for coarse or finer grained statements.
 
+```code
+WikiEntity entity = WikiUtils.parseEntity("REVISION", isJson);
+entity.setExtractReferences(true);
+entity.setExtractStatements(true);
+entity.parseContent();
 
+Map<Integer, String[]> citations = entity.getEntityCitations();
+for(int cite_id:citations.keySet()){
+  //do something with the citations
+}
+```
 ## JSON-Schema
 
 Below we show the json-schema we have defined to represent the different outputs we extract from the Wikipedia articles. The schema is meant to serve as a general reference for the possible structure of the extracted data. However, through our tool one can extract only specific parts of the data, for instance, extraction of the sections only, extraction of the citations only, extraction of the statements only, or extracting all possible parts from a Wikipedia article.
 
 The schema is available for download <a href="https://github.com/bfetahu/wiki_utils/blob/master/citation.json">here</a>. 
+
+<ul>
+<li>Sections Only</li>
+<li>Citations Only</li>
+<li>Statements and Citations</li>
+<li>All of the above</li>
+</ul>
+
+```code
+WikiEntity entity = WikiUtils.parseEntity("REVISION", isJson);
+entity.setExtractReferences(true);
+entity.setExtractStatements(true);
+entity.parseContent();
+
+//Sections only
+String output = entity.printSectionsOnly();
+
+//Citations only
+String output_citations = entity.printSectionCitationsOnly();
+
+//Statements and citations
+String output_statements = entity.printSectionStatementsOnly();
+
+//Full output
+String output_full = entity.printFullEntity();
+```
+

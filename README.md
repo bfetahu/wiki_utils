@@ -13,6 +13,15 @@ Automated News Suggestions for Populating Wikipedia Entity Pages. CIKM 2015: 323
 
 Here we disect the Wikipedia article into its composing parts, here the sections. We intentionally left the extraction of the sections to be configurable, such that one can extract only the head sections, or all the sectoins at the different depths, e.g. sub-sections, sub-sub-sections, etc.
 
+```code
+WikiEntity entity = WikiUtils.parseEntity("REVISION", isJson);
+entity.parseContent();
+
+for(String section_label:entity.getSectionKeys()){
+  WikiSection section = entity.getSection(section_label);
+}
+```
+
 ## Wikipedia Citation Extractor
 
 Here we extract the citations from the Wikipedia articles. We keep only the URL and the type of the citation in case such exist. For example, citations in Wikipedia can be of type news, book, web, etc., correspondingly, dependent on their type these might have a URL (e.g. news or web). 

@@ -43,7 +43,6 @@ for(int cite_id:citations.keySet()){
 
 Below we show the json-schema we have defined to represent the different outputs we extract from the Wikipedia articles. The schema is meant to serve as a general reference for the possible structure of the extracted data. However, through our tool one can extract only specific parts of the data, for instance, extraction of the sections only, extraction of the citations only, extraction of the statements only, or extracting all possible parts from a Wikipedia article.
 
-The schema is available for download <a href="https://github.com/bfetahu/wiki_utils/blob/master/citation.json">here</a>. 
 
 <ul>
 <li>Sections Only</li>
@@ -51,6 +50,9 @@ The schema is available for download <a href="https://github.com/bfetahu/wiki_ut
 <li>Statements and Citations</li>
 <li>All of the above</li>
 </ul>
+
+The schema is available for download <a href="https://github.com/bfetahu/wiki_utils/blob/master/citation.json">here</a>. 
+
 
 ```code
 WikiEntity entity = WikiUtils.parseEntity("REVISION", isJson);

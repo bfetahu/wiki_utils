@@ -5,8 +5,7 @@ In this library, we developed techniques for parsing the content of Wikipedia ar
 We developed several parsing mechanisms, which we outline below. 
 
 ```code
-Besnik Fetahu, Katja Markert, Avishek Anand:
-Automated News Suggestions for Populating Wikipedia Entity Pages. CIKM 2015: 323-332
+Besnik Fetahu, Katja Markert, Avishek Anand: Automated News Suggestions for Populating Wikipedia Entity Pages. CIKM 2015: 323-332
 ```
 
 ## Wikipedia Section Extractor

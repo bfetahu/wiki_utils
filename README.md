@@ -5,7 +5,8 @@ In this library, we developed techniques for parsing the content of Wikipedia ar
 We developed several parsing mechanisms, which we outline below. 
 
 ```code
-Besnik Fetahu, Katja Markert, Avishek Anand: Automated News Suggestions for Populating Wikipedia Entity Pages. CIKM 2015: 323-332
+Besnik Fetahu, Katja Markert, Avishek Anand: 
+Automated News Suggestions for Populating Wikipedia Entity Pages. CIKM 2015: 323-332
 ```
 
 ## Wikipedia Section Extractor
@@ -23,4 +24,4 @@ We additionally extract the statements citing such references. Here we rely on a
 
 Below we show the json-schema we have defined to represent the different outputs we extract from the Wikipedia articles. The schema is meant to serve as a general reference for the possible structure of the extracted data. However, through our tool one can extract only specific parts of the data, for instance, extraction of the sections only, extraction of the citations only, extraction of the statements only, or extracting all possible parts from a Wikipedia article.
 
-The schema is available for download here. 
+The schema is available for download <a href="https://github.com/bfetahu/wiki_utils/blob/master/citation.json">here</a>. 
